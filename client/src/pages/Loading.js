@@ -27,7 +27,7 @@ export default function Loading({ auditData, setAuditData, setPage }) {
 
       // Call the Express backend
       try {
-        const res = await fetch('http://localhost:5000/api/audit', {
+        const res = await fetch('https://voltflora-production.up.railway.app/api/audit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(auditData),
