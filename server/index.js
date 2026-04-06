@@ -8,10 +8,9 @@ const { computeAudit } = require('./auditEngine');
 
 const app = express();
 app.use(cors({
-  origin: 'https://voltflora.vercel.app/'
+  origin: '*'
 }));
 app.use(express.json());
-
 
 app.post('/api/audit', async (req, res) => {
   try {
