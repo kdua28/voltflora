@@ -1,26 +1,17 @@
 :root {
-  --green:        #2D6A4F;
-  --green-light:  #52B788;
-  --green-pale:   #D8F3DC;
-  --amber:        #E9C46A;
-  --amber-dark:   #F4A261;
-  --dark:         #1A2E1C;
-  --cream:        #FAFAF5;
-  --muted:        #5A7A5C;
-  --border:       #C8E6C9;
+  --green: #2D6A4F;
+  --green-light: #52B788;
+  --green-pale: #D8F3DC;
+  --amber: #E9C46A;
+  --amber-dark: #F4A261;
+  --dark: #1A2E1C;
+  --cream: #FAFAF5;
+  --muted: #5A7A5C;
+  --border: #C8E6C9;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap');
-
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--dark);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
-
-
-.logo { font-family: 'Fraunces', serif; }
-.logo span { color: var(--amber-dark); }
