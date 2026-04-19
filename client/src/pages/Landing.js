@@ -19,7 +19,7 @@ const TICKER_ITEMS = [
   'Free · No signup required',
 ];
 
-export default function Landing({ setPage }) {
+export default function Landing({ setPage, setAuditData }) {
   return (
     <div className="landing">
 
@@ -27,9 +27,9 @@ export default function Landing({ setPage }) {
       <nav className="nav">
         <div className="logo">Volt<span className="logo-dot">.</span>Flora</div>
         <div className="nav-links">
-          <span className="nav-link">How it works</span>
-          <span className="nav-link">EPA data</span>
-          <span className="nav-link">About</span>
+          <span className="nav-link" onClick={() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' })}>How it works</span>
+          <span className="nav-link" onClick={() => document.getElementById('epa').scrollIntoView({ behavior: 'smooth' })}>EPA data</span>
+          <span className="nav-link" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>About</span>
           <button className="nav-cta" onClick={() => setPage('form')}>Start free audit</button>
         </div>
       </nav>
@@ -53,7 +53,7 @@ export default function Landing({ setPage }) {
           </p>
           <div className="hero-actions">
             <button className="btn-hero" onClick={() => setPage('form')}>Start free audit →</button>
-            <button className="btn-outline" onClick={() => setPage('form')}>See sample report</button>
+            <button className="btn-outline" onClick={() => { setAuditData(null); setPage('report'); }}>See sample report</button>
           </div>
           <div className="hero-proof">
             {['Takes 3 minutes', 'No account needed', 'Groq AI powered'].map((t, i) => (
@@ -122,7 +122,7 @@ export default function Landing({ setPage }) {
       </div>
 
       {/* HOW IT WORKS */}
-      <div className="how">
+      <div className="how" id="how">
         <div className="section-kicker"><div className="section-kicker-line" />How it works</div>
         <div className="section-heading">
           From utility bill<br />to action plan.<br />
@@ -144,7 +144,7 @@ export default function Landing({ setPage }) {
       </div>
 
       {/* DATA / EPA */}
-      <div className="data-sec">
+      <div className="data-sec" id="epa">
         <div className="data-inner">
           <div className="data-text">
             <div className="section-kicker"><div className="section-kicker-line" />Real data</div>
@@ -178,8 +178,8 @@ export default function Landing({ setPage }) {
         </div>
       </div>
 
-      {/* WHY */}
-      <div className="why">
+      {/* WHY / ABOUT */}
+      <div className="why" id="about">
         <div className="section-kicker"><div className="section-kicker-line" />The opportunity</div>
         <div className="section-heading">
           Small businesses<br />are the biggest<br />
