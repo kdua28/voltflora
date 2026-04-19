@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap');
+
 :root {
   --green: #2D6A4F;
   --green-light: #52B788;
@@ -11,7 +13,14 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3,
+.hero-title,
+.section-heading,
+.cta-h {
+  font-family: 'DM Serif Display', serif;
 }
