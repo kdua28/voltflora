@@ -45,7 +45,7 @@ app.post('/api/audit', async (req, res) => {
       aiJson = {};
     }
 
-    res.json({ ...computed, ...aiJson, success: true });
+    res.json({ ...formData, ...computed, ...aiJson, success: true });
 
   } catch(err) {
     console.error('Error:', err.message);
