@@ -27,7 +27,7 @@ export default function Loading({ auditData, setAuditData, setPage }) {
 
       // Call the Express backend
       try {
-        const res = await fetch('https://voltflora.onrender.com', {
+        const res = await fetch('https://voltflora.onrender.com/api/audit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(auditData),
